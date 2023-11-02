@@ -12,7 +12,7 @@ namespace DB_Sale
         public string Name { get; set; }
         public int Percent_Sale { get; set; }
 
-        public virtual ICollection<Clients> People { get; set; }
+        public virtual ICollection<Clients> Clients { get; set; }
 
     }
 }

@@ -22,5 +22,11 @@ namespace DB_Sale
 
             return optionsBuilder.Options;
         }
+
+        public DbSet<Sales> Sales { get; set; }
+        public DbSet<Clients> Clients { get; set; }
+        public DbSet<Bikes> Bikes { get; set; }
+        public DbSet<Rents> Rents { get; set; }
+
     }
 }
