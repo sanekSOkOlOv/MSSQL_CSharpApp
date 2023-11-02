@@ -63,11 +63,11 @@ namespace DB_Sale
                                     Name = client.Name,
                                     Model = bike.Model,
                                     Cost = bike.Cost,
-                                    RentTotal = rent.Day * bike.Cost
+                                    RentTotal = (rent.Day * bike.Cost)*(1 - sale.Percent_Sale / 100.0)
                                 };
 
 
-                    // Выполните запрос и установите результаты в DataGridView
+                    
                     dataGridView6.DataSource = query.ToList();
                 }
                 catch (Exception ex)
@@ -106,10 +106,13 @@ namespace DB_Sale
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+
             string model = textBox1.Text;
             int price = int.Parse(textBox2.Text);
             int speed = int.Parse(textBox3.Text);
             int wheelSize = int.Parse(textBox4.Text);
+
 
             var newBike = new Bikes
             {
@@ -166,6 +169,51 @@ namespace DB_Sale
                 label7.Text = bikesInfo;
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            {
+                int bikeid = int.Parse(textBox6.Text);
+                int client = int.Parse(textBox7.Text);
+                int day = int.Parse(textBox8.Text);
+
+                var newRent = new Rents
+                {
+                    Client_id = client,
+                    Bike_id = bikeid,
+                    Day = day,
+                };
+
+                using (var context = new MSSQLContext())
+                {
+
+                    context.Rents.Add(newRent);
+                    context.SaveChanges();
+
+                    var rents = context.Rents.ToList();
+                    dataGridView4.DataSource = rents;
+                }
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            int rentId = int.Parse(textBox9.Text);
+
+            using (var context = new MSSQLContext())
+            {
+                var rentToDelete = context.Rents.FirstOrDefault(b => b.Rent_id == rentId);
+                if (rentToDelete != null)
+                {
+                    context.Rents.Remove(rentToDelete);
+                    context.SaveChanges();
+
+                    var rent = context.Rents.ToList();
+                    dataGridView4.DataSource = rent;
+                }
+            }
+        }
+
     }
 
 

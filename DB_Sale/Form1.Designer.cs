@@ -52,6 +52,16 @@
             tabPage3 = new TabPage();
             dataGridView3 = new DataGridView();
             tabPage4 = new TabPage();
+            button6 = new Button();
+            textBox9 = new TextBox();
+            label11 = new Label();
+            label10 = new Label();
+            button5 = new Button();
+            label9 = new Label();
+            textBox8 = new TextBox();
+            textBox7 = new TextBox();
+            label8 = new Label();
+            textBox6 = new TextBox();
             dataGridView4 = new DataGridView();
             tabPage5 = new TabPage();
             dataGridView6 = new DataGridView();
@@ -263,7 +273,7 @@
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1163, 577);
+            tabPage2.Size = new Size(1274, 577);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Sales";
             tabPage2.UseVisualStyleBackColor = true;
@@ -284,7 +294,7 @@
             tabPage3.Location = new Point(4, 29);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(1163, 577);
+            tabPage3.Size = new Size(1274, 577);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Clients";
             tabPage3.UseVisualStyleBackColor = true;
@@ -301,14 +311,108 @@
             // 
             // tabPage4
             // 
+            tabPage4.Controls.Add(button6);
+            tabPage4.Controls.Add(textBox9);
+            tabPage4.Controls.Add(label11);
+            tabPage4.Controls.Add(label10);
+            tabPage4.Controls.Add(button5);
+            tabPage4.Controls.Add(label9);
+            tabPage4.Controls.Add(textBox8);
+            tabPage4.Controls.Add(textBox7);
+            tabPage4.Controls.Add(label8);
+            tabPage4.Controls.Add(textBox6);
             tabPage4.Controls.Add(dataGridView4);
             tabPage4.Location = new Point(4, 29);
             tabPage4.Name = "tabPage4";
             tabPage4.Padding = new Padding(3);
-            tabPage4.Size = new Size(1163, 577);
+            tabPage4.Size = new Size(1274, 577);
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Rents";
             tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            button6.Location = new Point(918, 129);
+            button6.Name = "button6";
+            button6.Size = new Size(94, 29);
+            button6.TabIndex = 16;
+            button6.Text = "Delete";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
+            // textBox9
+            // 
+            textBox9.Location = new Point(906, 84);
+            textBox9.Name = "textBox9";
+            textBox9.Size = new Size(125, 27);
+            textBox9.TabIndex = 15;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(948, 61);
+            label11.Name = "label11";
+            label11.Size = new Size(22, 20);
+            label11.TabIndex = 14;
+            label11.Text = "Id";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(459, 304);
+            label10.Name = "label10";
+            label10.Size = new Size(35, 20);
+            label10.TabIndex = 13;
+            label10.Text = "Day";
+            // 
+            // button5
+            // 
+            button5.Location = new Point(64, 395);
+            button5.Name = "button5";
+            button5.Size = new Size(94, 29);
+            button5.TabIndex = 12;
+            button5.Text = "ADD";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(271, 304);
+            label9.Name = "label9";
+            label9.Size = new Size(66, 20);
+            label9.TabIndex = 11;
+            label9.Text = "Client ID";
+            // 
+            // textBox8
+            // 
+            textBox8.Location = new Point(436, 347);
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(125, 27);
+            textBox8.TabIndex = 9;
+            // 
+            // textBox7
+            // 
+            textBox7.Location = new Point(243, 347);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(125, 27);
+            textBox7.TabIndex = 8;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(102, 304);
+            label8.Name = "label8";
+            label8.Size = new Size(56, 20);
+            label8.TabIndex = 7;
+            label8.Text = "Bike ID";
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(59, 347);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(125, 27);
+            textBox6.TabIndex = 6;
             // 
             // dataGridView4
             // 
@@ -327,7 +431,7 @@
             tabPage5.Location = new Point(4, 29);
             tabPage5.Name = "tabPage5";
             tabPage5.Padding = new Padding(3);
-            tabPage5.Size = new Size(1163, 577);
+            tabPage5.Size = new Size(1274, 577);
             tabPage5.TabIndex = 4;
             tabPage5.Text = "Origproces";
             tabPage5.UseVisualStyleBackColor = true;
@@ -371,6 +475,7 @@
             tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
             tabPage4.ResumeLayout(false);
+            tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView4).EndInit();
             tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView6).EndInit();
@@ -408,5 +513,15 @@
         private Button button2;
         private Label label7;
         private Label label6;
+        private Label label8;
+        private TextBox textBox6;
+        private Label label9;
+        private TextBox textBox8;
+        private TextBox textBox7;
+        private Button button5;
+        private Label label10;
+        private Button button6;
+        private TextBox textBox9;
+        private Label label11;
     }
 }

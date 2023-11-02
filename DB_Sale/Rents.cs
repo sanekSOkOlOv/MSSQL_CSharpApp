@@ -18,10 +18,10 @@ namespace DB_Sale
         public int Bike_id { get; set; }
         public int Day { get; set; }
 
-        [ForeignKey("Client_id")] // Вказуємо, що це зовнішній ключ для зв'язку з Clients
+        [ForeignKey("Client_id")] 
         public virtual Clients Clients { get; set; }
 
-        [ForeignKey("Bike_id")] // Вказуємо, що це зовнішній ключ для зв'язку з Bikes
+        [ForeignKey("Bike_id")] 
         public virtual Bikes Bikes { get; set; }
 
 
