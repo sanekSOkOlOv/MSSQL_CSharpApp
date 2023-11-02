@@ -28,5 +28,7 @@ namespace DB_Sale
         public DbSet<Bikes> Bikes { get; set; }
         public DbSet<Rents> Rents { get; set; }
 
+
+
     }
 }
